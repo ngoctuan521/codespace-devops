@@ -12,9 +12,9 @@ jobs:
     - name: Install dependencies
       run: make install
     - name: lint
-      run: pylint --disable=R,C hello.py
+      run: make lint
     - name: test
-      run: python -m pytest -vv --cov=hello test_hello.py
+      run: make test
     - name: format
-      run: black *.py
+      run: make format
 
