@@ -8,4 +8,4 @@ format:
 	black *.py
 
 test:
-	python -m pytest -vv --conv=hello test_hello.py
+	python -m pytest -vv --cov=hello test_hello.py

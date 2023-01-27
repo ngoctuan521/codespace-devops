@@ -11,4 +11,10 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: make install
+    - name: lint
+      run: pylint --disable=R,C hello.py
+    - name: test
+      run: python -m pytest -vv --cov=hello test_hello.py
+    - name: format
+      run: black *.py
 
